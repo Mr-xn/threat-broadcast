@@ -161,3 +161,34 @@ Traceback (most recent call last):
   File "/opt/hostedtoolcache/Python/3.8.7/x64/lib/python3.8/site-packages/requests/adapters.py", line 529, in send
     raise ReadTimeout(e, request=request)
 requests.exceptions.ReadTimeout: HTTPSConnectionPool(host='www.anquanke.com', port=443): Read timed out. (read timeout=60)
+2021-02-27 09:31:02 [ERROR] : [邮件] 推送威胁情报失败
+Traceback (most recent call last):
+  File "/home/runner/work/threat-broadcast/threat-broadcast/src/notice/mail.py", line 47, in to_mail
+    smtpObj.login(sender, password)
+  File "/opt/hostedtoolcache/Python/3.8.7/x64/lib/python3.8/smtplib.py", line 732, in login
+    raise last_exception
+  File "/opt/hostedtoolcache/Python/3.8.7/x64/lib/python3.8/smtplib.py", line 721, in login
+    (code, resp) = self.auth(
+  File "/opt/hostedtoolcache/Python/3.8.7/x64/lib/python3.8/smtplib.py", line 644, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (502, b'Invalid input from 100.107.4.130 to newxmesmtplogicsvrszc6.qq.com')
+2021-02-27 09:31:02 [ERROR] : Traceback (most recent call last):
+  File "/home/runner/work/threat-broadcast/threat-broadcast/src/notice/mail.py", line 47, in to_mail
+    smtpObj.login(sender, password)
+  File "/opt/hostedtoolcache/Python/3.8.7/x64/lib/python3.8/smtplib.py", line 732, in login
+    raise last_exception
+  File "/opt/hostedtoolcache/Python/3.8.7/x64/lib/python3.8/smtplib.py", line 721, in login
+    (code, resp) = self.auth(
+  File "/opt/hostedtoolcache/Python/3.8.7/x64/lib/python3.8/smtplib.py", line 644, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (502, b'Invalid input from 100.107.4.130 to newxmesmtplogicsvrszc6.qq.com')
+Traceback (most recent call last):
+  File "/home/runner/work/threat-broadcast/threat-broadcast/src/notice/mail.py", line 47, in to_mail
+    smtpObj.login(sender, password)
+  File "/opt/hostedtoolcache/Python/3.8.7/x64/lib/python3.8/smtplib.py", line 732, in login
+    raise last_exception
+  File "/opt/hostedtoolcache/Python/3.8.7/x64/lib/python3.8/smtplib.py", line 721, in login
+    (code, resp) = self.auth(
+  File "/opt/hostedtoolcache/Python/3.8.7/x64/lib/python3.8/smtplib.py", line 644, in auth
+    raise SMTPAuthenticationError(code, resp)
+smtplib.SMTPAuthenticationError: (502, b'Invalid input from 100.107.4.130 to newxmesmtplogicsvrszc6.qq.com')
