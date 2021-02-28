@@ -44,7 +44,7 @@
 ## 订阅方式
 
 - 【开发者订阅】 可自行 Fork 项目，通过配置定时任务向自己的邮箱推送即可
-- 【个人订阅】 在 <a href="https://github.com/mr-xn/threat-broadcast/issues/new?title=Your+Email&amp;body=Just+push+%27Submit+new+issue%27.+You+don%27t+need+to+do+anything+else.">Issues</a> 标题留下你的邮箱即可接收播报信息
+- 【个人订阅】 在 <a href="https://github.com/mr-xn/threat-broadcast/issues/new?title=Your+Email&amp;body=Just+push+%27Submit+new+issue%27.+You+don%27t+need+to+do+anything+else.">Issues</a> 标题留下你的邮箱等待添加后即可接收播报信息
 
 
 ## 威胁情报推送源
@@ -68,8 +68,10 @@
 - [Fork 本项目](https://github.com/mr-xn/threat-broadcast) 到你的代码仓库
 - 通过 Settings --> Secrets 配置用于 **发送** 威胁情报邮件的 3 个环境变量：
 <br/>　　`MAIL_SMTP`： SMTP 服务器（国内推荐 QQ），如 `smtp.qq.com`
-<br/>　　`MAIL_USER`： 邮箱账号，如 `threatbroadcast@qq.com`
+<br/>　　`MAIL_USER`： 邮箱账号，如 `mrxn.net@qq.com`
 <br/>　　`MAIL_PASS`： 邮箱密码
+<br/>　　`MAIL_RECV`： 接收情报的邮箱，如 `mrxn.net@gmail.com,admin@mrxn.net`  
+PS：如果邮箱的发送端口不是默认的`465`，比如`outlook`的邮箱默认是`587`,请修改：https://github.com/Mr-xn/threat-broadcast/blob/main/.github/workflows/autorun.yml#L35 处的`server_port`的值。
 - 启用 Settings --> Actions 功能
 
 > 尔后程序便会每小时执行一次，并自动生成 [Github Page](https://mr-xn.github.io/threat-broadcast/) 播报页面（若要调整执行频率，可修改 [`autorun.yml`](.github/workflows/autorun.yml) 的 `schedule` 触发时点）
