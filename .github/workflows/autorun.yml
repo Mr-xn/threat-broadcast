@@ -1,7 +1,7 @@
 name: Automatically crawl CVEs
 on:
   schedule:
-    - cron:  '15 * * * *'
+    - cron:  '0 * * * *'
   workflow_dispatch:
 
 jobs:
@@ -27,7 +27,7 @@ jobs:
     - name: Crawl CVEs
       run: |-
 #         python main.py -mg
-        python main.py -gtk ${{ secrets.GITHUB_TOKEN }}
+        python main.py -gtk
     # 若该时间段没有 CVE， 则 file://cache/mail.dat 文件不会生成，此时不会发送邮件
     - name: Send mail
       uses: lyy289065406/action-send-mail@v3
