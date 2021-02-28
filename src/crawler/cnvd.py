@@ -60,7 +60,7 @@ class CNVD(BaseCrawler):
                     cves.append(cve)
                     log.debug(cve)
         else:
-            log.warn('获取 [%s] 威胁情报失败： [HTTP Error %i] 服务器返回内容：[%s]' % (self.NAME_CH(), response.status_code),response.text)
+            log.warn('获取 [%s] 威胁情报失败： [HTTP Error %i] 服务器返回内容：[%s]' % (self.NAME_CH(), response.status_code,response.text))
         return cves
 
 
