@@ -70,7 +70,7 @@
 <br/>　　`MAIL_SMTP`： SMTP 服务器（国内推荐 QQ），如 `smtp.qq.com`
 <br/>　　`MAIL_USER`： 邮箱账号，如 `mrxn.net@qq.com`
 <br/>　　`MAIL_PASS`： 邮箱密码
-<br/>　　`MAIL_RECV`： 接收情报的邮箱，如 `mrxn.net@gmail.com,admin@mrxn.net`  
+<!--<br/>　　`MAIL_RECV`： 接收情报的邮箱，如 `mrxn.net@gmail.com,admin@mrxn.net`  -->
 PS：如果邮箱的发送端口不是默认的`465`，比如`outlook`的邮箱默认是`587`,请修改：https://github.com/Mr-xn/threat-broadcast/blob/main/.github/workflows/autorun.yml#L35 处的`server_port`的值。
 - 启用 Settings --> Actions 功能
 
