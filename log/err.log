@@ -1,0 +1,19 @@
+2021-02-28 14:06:41 [ERROR] : 获取 [CNVD] 威胁情报异常
+Traceback (most recent call last):
+  File "/home/runner/work/threat-broadcast/threat-broadcast/src/crawler/_base_crawler.py", line 64, in cves
+    new_cves = self.get_cves()
+  File "/home/runner/work/threat-broadcast/threat-broadcast/src/crawler/cnvd.py", line 63, in get_cves
+    log.warn('获取 [%s] 威胁情报失败： [HTTP Error %i] 服务器返回内容：[%s]' % (self.NAME_CH(), response.status_code),response.text)
+TypeError: not enough arguments for format string
+2021-02-28 14:06:41 [ERROR] : Traceback (most recent call last):
+  File "/home/runner/work/threat-broadcast/threat-broadcast/src/crawler/_base_crawler.py", line 64, in cves
+    new_cves = self.get_cves()
+  File "/home/runner/work/threat-broadcast/threat-broadcast/src/crawler/cnvd.py", line 63, in get_cves
+    log.warn('获取 [%s] 威胁情报失败： [HTTP Error %i] 服务器返回内容：[%s]' % (self.NAME_CH(), response.status_code),response.text)
+TypeError: not enough arguments for format string
+Traceback (most recent call last):
+  File "/home/runner/work/threat-broadcast/threat-broadcast/src/crawler/_base_crawler.py", line 64, in cves
+    new_cves = self.get_cves()
+  File "/home/runner/work/threat-broadcast/threat-broadcast/src/crawler/cnvd.py", line 63, in get_cves
+    log.warn('获取 [%s] 威胁情报失败： [HTTP Error %i] 服务器返回内容：[%s]' % (self.NAME_CH(), response.status_code),response.text)
+TypeError: not enough arguments for format string
