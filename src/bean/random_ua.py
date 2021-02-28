@@ -9,7 +9,7 @@
 获取随机user-agent头部
 方便poc程序的调用
 Usage:
-from src.crawler.random_ua import get_random_ua, get_pc_ua, get_phone_ua
+from src.bean.random_ua import get_random_ua, get_pc_ua, get_phone_ua
 ua1 = get_random_ua()
 ua2 = get_pc_ua()
 ua3 = get_phone_ua()
