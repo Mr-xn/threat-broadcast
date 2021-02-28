@@ -23,7 +23,7 @@ class CNVD(BaseCrawler):
         self.name_en = 'CNVD'
         self.home_page = 'https://www.cnvd.org.cn/'
         self.url_list = 'https://www.cnvd.org.cn/flaw/list.htm'
-        self.url_cve = 'https://www.cnvd.org.cn/flaw/show/'
+#         self.url_cve = 'https://www.cnvd.org.cn/flaw/show/'
 
 
     def NAME_CH(self):
@@ -60,7 +60,7 @@ class CNVD(BaseCrawler):
                     cves.append(cve)
                     log.debug(cve)
         else:
-            log.warn('获取 [%s] 威胁情报失败： [HTTP Error %i]' % (self.NAME_CH(), response.status_code))
+            log.warn('获取 [%s] 威胁情报失败： [HTTP Error %i] 服务器返回内容：[%s]' % (self.NAME_CH(), response.status_code),response.text)
         return cves
 
 
