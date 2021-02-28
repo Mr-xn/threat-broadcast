@@ -51,7 +51,7 @@ class BaseCrawler:
             'Accept-Language' : 'zh-CN,zh;q=0.9',
             'Connection' : 'keep-alive',
 #             'User-Agent' : 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_4) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/51.0.2704.103 Safari/537.36',
-            "User-Agent : get_random_ua()
+            "User-Agent" : get_random_ua()
         }
 
 
