@@ -1,0 +1,14 @@
+
+<h3>发现最新威胁情报<font color="red">2</font>条：</h3>
+<ul>
+    <li><font color="red">2</font>条由 [<a href="https://www.anquanke.com/vul">安全客</a>] 提供</li>
+</ul>
+<h3>详细漏洞清单如下：</h3>
+<br/>
+<br/>==============================================<br/>[<b>漏洞来源</b>] 安全客<br/>[<b>漏洞编号</b>] <font color='blue'>CVE-2020-36079</font><br/>[<b>披露时间</b>] 2021-02-28 20:20:02<br/>[<b>漏洞描述</b>] Zenphoto CMS 1.5.7 Shell Upload - CXSecurity.com<br/>[<b>相关链接</b>] <a href='https://www.anquanke.com/vul/id/2362804'>https://www.anquanke.com/vul/id/2362804</a>
+<br/>==============================================<br/>[<b>漏洞来源</b>] 安全客<br/>[<b>漏洞编号</b>] <font color='blue'>CVE-2021-27198</font><br/>[<b>披露时间</b>] 2021-02-28 20:20:02<br/>[<b>漏洞描述</b>] VisualWare MyConnection Server 11.x Remote Code Execution - CXSecurity.com<br/>[<b>相关链接</b>] <a href='https://www.anquanke.com/vul/id/2362803'>https://www.anquanke.com/vul/id/2362803</a>
+
+<br/><br/>
+++++++++++++++++++++++++++++++++++++++++++++++
+<br/>
+<font color="red">【情报收集与播报支持】</font> https://mr-xn.github.io/threat-broadcast/
