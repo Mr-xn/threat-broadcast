@@ -36,7 +36,7 @@ class BaseCrawler:
 
     @abstractmethod
     def HOME_PAGE(self):
-        return 'https://exp-blog.com'
+        return 'https://github.com/Mr-xn/threat-broadcast/'
 
 
     def CACHE_PATH(self):
