@@ -43,7 +43,7 @@ jobs:
         username: ${{ secrets.MAIL_USER }}
         password: ${{ secrets.MAIL_PASS }}
         from: ${{ secrets.MAIL_USER }}
-        to: file://recv/mail.dat #${{ secrets.MAIL_RECV }}
+        to: file://cache/mail_recvs.dat #${{ secrets.MAIL_RECV }}
         subject: send_mail_test
         body: send_mail_test
         content_type: text/html
