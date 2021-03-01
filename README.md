@@ -145,7 +145,7 @@ threat-broadcast
 - Fork From: `https://github.com/mr-xn/threat-broadcast/`
 
 ### 说明  
-> 这个 repo 还有很多 BUG !!! 欢迎 pp ，不会 DEBUG 的朋友 慎用！
+> 这个 REPO 还有很多 BUG !!! 欢迎 PR ，不会 DEBUG 的朋友 慎用！
 
 ------
 
