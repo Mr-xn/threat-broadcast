@@ -39,7 +39,7 @@ jobs:
         from: ${{ secrets.MAIL_USER }}
         to: ${{ secrets.MAIL_RECV }} # file://cache/mail_recvs.dat
         subject: 威胁情报播报
-        body: file://cache/mail.dat
+        body: file://cache/mail_content.dat
         content_type: text/html
 
     # readme-bot 是 Github runner 的固定账号，不用改
