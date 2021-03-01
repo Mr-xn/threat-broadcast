@@ -2,16 +2,9 @@
 
 name: send_mail_test
 
-# Controls when the action will run. 
 on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
-
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+  schedule:
+    - cron:  '15 * * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -36,14 +29,14 @@ jobs:
           echo test, and deploy your project.
           
       - name: Send mail
-      uses: lyy289065406/action-send-mail@master
-      with:
-        server_address: ${{ secrets.MAIL_SMTP }}
-        server_port: 587
-        username: ${{ secrets.MAIL_USER }}
-        password: ${{ secrets.MAIL_PASS }}
-        from: ${{ secrets.MAIL_USER }}
-        to: file://cache/mail_recvs.dat #${{ secrets.MAIL_RECV }}
-        subject: send_mail_test
-        body: send_mail_test
-        content_type: text/html
+        uses: lyy289065406/action-send-mail@master
+        with:
+          server_address: ${{ secrets.MAIL_SMTP }}
+          server_port: 587
+          username: ${{ secrets.MAIL_USER }}
+          password: ${{ secrets.MAIL_PASS }}
+          from: ${{ secrets.MAIL_USER }}
+          to: file://cache/mail_recvs.dat
+          body: file://cache/mail_content.dat
+          content_type: text/html
+          subject: 威胁情报播报
