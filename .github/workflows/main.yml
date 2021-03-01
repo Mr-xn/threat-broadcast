@@ -26,15 +26,4 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Send mail
-        uses: dawidd6/action-send-mail@master
-        with:
-          server_address: ${{ secrets.MAIL_SMTP }}
-          server_port: 587
-          username: ${{ secrets.MAIL_USER }}
-          password: ${{ secrets.MAIL_PASS }}
-          from: ${{ secrets.MAIL_USER }}
-          to: ${{ secrets.MAIL_RECV }}
-          body: file://README.md
-          content_type: text/html
-          subject: send_mail_test
+
