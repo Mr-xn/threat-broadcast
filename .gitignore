@@ -1,0 +1,8 @@
+log/*
+*.py[cod]
+*$py.class
+
+
+# 避免邮箱信息被提交到代码仓库
+recv/mail_*.dat
+cache/mail_*.dat
