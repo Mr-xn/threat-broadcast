@@ -29,8 +29,6 @@
 
 
 > 目前最有效的推送方式是邮件推送（建议使用手机邮箱，如 [139](https://appmail.mail.10086.cn) 可触发短信通知）
-<br/> 因 QQ 机器人已停止服务，暂无法实现 QQ 群自动推送
-<br/> 因 WeChat 公众号停止个人号群发服务，现只能用户自己手动获取推送
 
 <details>
 <summary>播报效果</summary>
@@ -66,11 +64,11 @@
 本项目已配置 [Github Actions](https://docs.github.com/cn/actions/configuring-and-managing-workflows/configuring-a-workflow)，因此你只需轻松几步即可实现部署：
 
 - [Fork 本项目](https://github.com/mr-xn/threat-broadcast) 到你的代码仓库
-- 通过 Settings --> Secrets 配置用于 **发送** 威胁情报邮件的 3 个环境变量：
+- 通过 Settings --> Secrets 配置用于 **发送** 威胁情报邮件的 4 个环境变量：
 <br/>　　`MAIL_SMTP`： SMTP 服务器（国内推荐 QQ），如 `smtp.qq.com`
 <br/>　　`MAIL_USER`： 邮箱账号，如 `mrxn.net@qq.com`
 <br/>　　`MAIL_PASS`： 邮箱密码
-<!--<br/>　　`MAIL_RECV`： 接收情报的邮箱，如 `mrxn.net@gmail.com,admin@mrxn.net`  -->
+<br/>　　`MAIL_RECV`： 接收情报的邮箱，如 `mrxn.net@gmail.com,admin@mrxn.net` 
 PS：如果邮箱的发送端口不是默认的`465`，比如`outlook`的邮箱默认是`587`,请修改：https://github.com/Mr-xn/threat-broadcast/blob/main/.github/workflows/autorun.yml#L35 处的`server_port`的值。
 - 启用 Settings --> Actions 功能
 
