@@ -37,7 +37,7 @@ jobs:
         username: ${{ secrets.MAIL_USER }}
         password: ${{ secrets.MAIL_PASS }}
         from: ${{ secrets.MAIL_USER }}
-        to: file://cache/mail_recvs.dat #${{ secrets.MAIL_RECV }}
+        to: ${{ secrets.MAIL_RECV }} # file://cache/mail_recvs.dat
         subject: 威胁情报播报
         body: file://cache/mail.dat
         content_type: text/html
