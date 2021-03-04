@@ -53,7 +53,9 @@ jobs:
         git push
     - name: update github page respo
       run: |-
-        gh repo clone Mr-xn/mr-xn.github.io
+        git config --global user.email "readme-bot@example.com"
+        git config --global user.name "README-bot"
+        git clone https://github.com/Mr-xn/mr-xn.github.io.git
         rm mr-xn.github.io/docs/threat-broadcast/index.html 
         cp docs/index.html mr-xn.github.io/docs/threat-broadcast/
         cd mr-xn.github.io
