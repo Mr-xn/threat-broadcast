@@ -51,3 +51,13 @@ jobs:
         git add -A
         git commit -m "Updated by Github Robot" || exit 0
         git push
+    - name: update github page respo
+      run: |-
+        git clone git@github.com:Mr-xn/mr-xn.github.io.git
+        rm mr-xn.github.io/docs/threat-broadcast/index.html 
+        cp docs/index.html mr-xn.github.io/docs/threat-broadcast/
+        cd mr-xn.github.io
+        git add -A
+        git commit -m "Updated by Github Robot" || exit 0
+        git push
+        
