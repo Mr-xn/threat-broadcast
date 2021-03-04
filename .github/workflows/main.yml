@@ -53,7 +53,7 @@ jobs:
         git push
     - name: update github page respo
       run: |-
-        git clone git@github.com:Mr-xn/mr-xn.github.io.git
+        gh repo clone Mr-xn/mr-xn.github.io
         rm mr-xn.github.io/docs/threat-broadcast/index.html 
         cp docs/index.html mr-xn.github.io/docs/threat-broadcast/
         cd mr-xn.github.io
