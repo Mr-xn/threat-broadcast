@@ -51,10 +51,3 @@ jobs:
         git add -A
         git commit -m "Updated by Github Robot" || exit 0
         git push
-    - name: update github page respo
-      uses: johno/actions-push-subdirectories@master
-      env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-          args: docs mr-xn.github.io
