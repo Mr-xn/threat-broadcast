@@ -52,15 +52,9 @@ jobs:
         git commit -m "Updated by Github Robot" || exit 0
         git push
     - name: update github page respo
-      run: |-
-        git config --global user.email "readme-bot@example.com"
-        git config --global user.name "README-bot"
-        git clone https://github.com/Mr-xn/mr-xn.github.io.git
-        pwd
-        rm mr-xn.github.io/docs/threat-broadcast/index.html 
-        cp docs/index.html mr-xn.github.io/docs/threat-broadcast/
-        cd mr-xn.github.io
-        git add -A
-        git commit -m "Updated by Github Robot" || exit 0
-        git push
-        
+      uses: johno/actions-push-subdirectories@master
+      env:
+          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      with:
+          args: docs mr-xn.github.io
