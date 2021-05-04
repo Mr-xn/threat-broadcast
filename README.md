@@ -143,7 +143,7 @@ threat-broadcast
 
 　[![Copyright (C) EXP,2016](https://img.shields.io/badge/Copyright%20(C)-EXP%202016-blue.svg)](http://exp-blog.com)　[![License: GPL v3](https://img.shields.io/badge/License-GPL%20v3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 
-- Fork From: `https://github.com/mr-xn/threat-broadcast/`
+- Fork From: `https://github.com/lyy289065406/threat-broadcast`
 
 ### 说明  
 > 这个 REPO 还有很多 BUG !!! 欢迎 PR ，不会 DEBUG 的朋友 慎用！
