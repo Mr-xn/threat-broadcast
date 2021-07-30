@@ -13,6 +13,7 @@ from src.utils import log
 import requests
 import re
 import time
+import os
 
 
 class CNVD(BaseCrawler):
@@ -22,8 +23,8 @@ class CNVD(BaseCrawler):
         self.name_ch = 'CNVD'
         self.name_en = 'CNVD'
 #         self.home_page = 'https://www.cnvd.org.cn/'
-        self.url_list = ${{ secrets.URL_LIST }}
-        self.url_cve = ${{ secrets.URL_CVE }}
+        self.url_list = os.environ["URL_LIST"]
+        self.url_cve = os.environ["URL_CVE"]
 
 
     def NAME_CH(self):
