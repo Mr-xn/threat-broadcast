@@ -19,7 +19,7 @@ import random
 
 # random user agent
 def get_random_ua():
-    first_num = random.randint(75, 86)
+    first_num = random.randint(75, 92)
     third_num = random.randint(3221, 4235)
     fourth_num = random.randint(0, 95)
     os_type = [
