@@ -59,13 +59,15 @@ class CVEInfo:
 
 
     def __repr__(self):
+        cnvd_url = 'https://www.cnvd.org.cn/flaw/show/'
+        crawl_url = ${{ secrets.CRAWL_URL }}
         return '\n'.join([
             "\n==============================================",
             "[ TITLE ] %s" % self.title,
             "[ TIME  ] %s" % self.time,
             "[ CVE   ] %s" % self.id,
             "[ SRC   ] %s" % self.src,
-            "[ URL   ] %s" % self.url,
+            "[ URL   ] %s" % self.url.replace(crawl_url,cnvd_url),
             "[ INFO  ] %s" % self.info,
         ])
 
