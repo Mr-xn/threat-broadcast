@@ -22,7 +22,7 @@ class CNVD(BaseCrawler):
         BaseCrawler.__init__(self)
         self.name_ch = 'CNVD'
         self.name_en = 'CNVD'
-#         self.home_page = 'https://www.cnvd.org.cn/'
+        self.home_page = 'https://www.cnvd.org.cn/'
         self.url_list = os.environ["URL_LIST"]
         self.url_cve = os.environ["URL_CVE"]
 
