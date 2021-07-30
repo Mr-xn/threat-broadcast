@@ -113,6 +113,8 @@ class BaseCrawler:
 
 
     def to_db(self, conn, dao, cve):
+        cnvd_url = 'https://www.cnvd.org.cn/flaw/show/'
+        crawl_url = os.environ["CRAWL_URL"]
         tcve = TCves()
         tcve.md5 = cve.MD5()
         tcve.src = cve.src
@@ -120,5 +122,5 @@ class BaseCrawler:
         tcve.title = cve.title
         tcve.info = cve.info
         tcve.time = cve.time
-        tcve.url = cve.url
+        tcve.url = cve.url.replace(crawl_url,cnvd_url)
         dao.insert(conn, tcve)
