@@ -21,9 +21,9 @@ class CNVD(BaseCrawler):
         BaseCrawler.__init__(self)
         self.name_ch = 'CNVD'
         self.name_en = 'CNVD'
-        self.home_page = 'https://www.cnvd.org.cn/'
-        self.url_list = 'https://www.cnvd.org.cn/flaw/list.htm'
-#         self.url_cve = 'https://www.cnvd.org.cn/flaw/show/'
+#         self.home_page = 'https://www.cnvd.org.cn/'
+        self.url_list = ${{ secrets.URL_LIST }}
+        self.url_cve = ${{ secrets.URL_CVE }}
 
 
     def NAME_CH(self):
@@ -53,7 +53,8 @@ class CNVD(BaseCrawler):
 
         cves = []
         if response.status_code == 200:
-            ids = re.findall(r'\thref="/flaw/show/([^"]+)"', response.text)
+            ids = re.findall(r'(CNVD-\d{4,6}-\d{3,6}|CNNVD-\d{4,6}-\d{3,6}|CICSVD-\d{4,6}-\d{3,6}|CVE-\d{4,6}-\d{3,6})', response.text)
+            ids = list(set(ids))
             for id in ids :
                 cve = self.to_cve(id)
                 if cve.is_vaild():
@@ -81,21 +82,13 @@ class CNVD(BaseCrawler):
         )
 
         if response.status_code == 200:
-            cve.title = re.findall(r'>(.*?)</h1>', response.text)[0].strip()
-            kvs = re.findall(r'<td class="alignRight">(.*?)</td>.*?<td>(.*?)</td>', response.text, re.DOTALL)
-            for kv in kvs :
-                key = kv[0].replace('\t', '').strip()
-                val = kv[1].replace('\t', '').strip()
-                
-                if key == 'CVE ID' :
-                    id = re.findall(r'>(.*?)</a>', val)[0].strip()
-                    cve.id = "%s (%s)" % (cve.id, id)
-
-                elif key == '公开日期' :
-                    cve.time = val + time.strftime(" %H:%M:%S", time.localtime())
-
-                elif key == '漏洞描述' :
-                    cve.info = val.replace('\r', '').replace('\n', '').replace('<br/>', '')
+            regex = r'<h1 .*?>(.*?)</h1>'
+            title = re.findall(regex,response.text,re.S)[0].strip()
+            public_time = re.findall(r'公开时间.*\s+(\d{2,4}-\d{1,2}-\d{1,2})\s+.*报送时间',response.text)[0].strip()
+            cnvd_info = re.findall(r'漏洞描述\s+</span></div></div>(\s.*)',response.text)[0].strip()
+            cve.title = title
+            cve.time = public_time
+            cve.info = cnvd_info
 
         time.sleep(2)
 
