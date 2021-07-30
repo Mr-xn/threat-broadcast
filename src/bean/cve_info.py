@@ -7,6 +7,7 @@
 
 
 import hashlib
+import os
 
 
 class CVEInfo:
@@ -60,7 +61,7 @@ class CVEInfo:
 
     def __repr__(self):
         cnvd_url = 'https://www.cnvd.org.cn/flaw/show/'
-        crawl_url = ${{ secrets.CRAWL_URL }}
+        crawl_url = os.environ["CRAWL_URL"]
         return '\n'.join([
             "\n==============================================",
             "[ TITLE ] %s" % self.title,
