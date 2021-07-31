@@ -34,24 +34,28 @@ class CVEInfo:
 
 
     def to_html(self):
+        cnvd_url = 'https://www.cnvd.org.cn/flaw/show/'
+        crawl_url = os.environ["CRAWL_URL"]
         return '<br/>'.join([
             "<br/>==============================================",
             "[<b>漏洞来源</b>] %s" % self.src,
             "[<b>漏洞编号</b>] <font color='blue'>%s</font>" % self.id,
             "[<b>披露时间</b>] %s" % self.time,
             "[<b>漏洞描述</b>] %s" % self.title,
-            "[<b>相关链接</b>] <a href='%s'>%s</a>" % (self.url, self.url)
+            "[<b>相关链接</b>] <a href='%s'>%s</a>" % (self.url.replace(crawl_url,cnvd_url), self.url.replace(crawl_url,cnvd_url))
         ])
 
 
     def to_msg(self):
+        cnvd_url = 'https://www.cnvd.org.cn/flaw/show/'
+        crawl_url = os.environ["CRAWL_URL"]
         return '\n'.join([
             "\n==============================================",
             "[ TITLE ] %s" % self.title,
             "[ TIME  ] %s" % self.time,
             "[ CVE   ] %s" % self.id,
             "[ SRC   ] %s" % self.src,
-            "[ URL   ] %s" % self.url
+            "[ URL   ] %s" % self.url.replace(crawl_url,cnvd_url)
         ])
 
 
