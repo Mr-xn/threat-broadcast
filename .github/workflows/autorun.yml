@@ -49,6 +49,7 @@ jobs:
     # readme-bot 是 Github runner 的固定账号，不用改
     - name: Commit and push Github page (if changed)
       run: |-
+        git init
         git diff
         git config --global user.email "readme-bot@example.com"
         git config --global user.name "README-bot"
