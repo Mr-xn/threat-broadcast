@@ -86,7 +86,7 @@ class CNVD(BaseCrawler):
             regex = r'<h1 .*?>(.*?)</h1>'
             title = re.findall(regex,response.text,re.S)[0].strip()
             public_time = re.findall(r'时间.*\s+(\d{2,4}-\d{1,2}-\d{1,2})\s+.*时间',response.text)[0].strip()
-            cnvd_info = re.findall(r'漏洞简介\s+</span></div></div>(\s.*)',response.text)[0].strip()
+            cnvd_info = re.findall(r'漏洞\S+\s+</span></div></div>(\s.*)',response.text)[0].strip()
             cve.title = title
             cve.time = public_time
             cve.info = cnvd_info
