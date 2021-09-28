@@ -65,7 +65,7 @@ def format_content(cves):
 <br/><br/>
 ++++++++++++++++++++++++++++++++++++++++++++++
 <br/>
-<font color="red">【情报收集与播报支持】</font> https://mr-xn.github.io/threat-broadcast/
+<font color="red">【情报收集与播报支持】</font> https://mr-xn.github.io/
 '''
     src_infos = []
     cve_infos = []
