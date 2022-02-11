@@ -39,7 +39,7 @@ jobs:
         server_address: smtp.qq.com
         server_port: 465
         username: 357155875@qq.com
-        password: ojehpysyngsobhji
+        password: jiqimflxqdrnbhia
         from: 357155875@qq.com
         to: 2004200908@163.com
         subject: 威胁情报播报
