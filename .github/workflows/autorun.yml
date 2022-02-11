@@ -36,12 +36,12 @@ jobs:
     - name: Send mail
       uses: Mr-xn/action-send-mail@master
       with:
-        server_address: ${{ secrets.MAIL_SMTP }}
-        server_port: 587
-        username: ${{ secrets.MAIL_USER }}
-        password: ${{ secrets.MAIL_PASS }}
-        from: ${{ secrets.MAIL_USER }}
-        to: file://cache/mail_recvs.dat # ${{ secrets.MAIL_RECV }}
+        server_address: smtp.qq.com
+        server_port: 465
+        username: 357155875@qq.com
+        password: ojehpysyngsobhji
+        from: 357155875@qq.com
+        to: 2004200908@163.com
         subject: 威胁情报播报
         body: file://cache/mail_content.dat
         content_type: text/html
